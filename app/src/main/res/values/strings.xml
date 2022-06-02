@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Application</string>
+    <string name="main_heading">Game</string>
+    <string name="login_to_cont">Log in to continue</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="register_link_desc">If you do not have account click here to create one</string>
+    <string name="login_link_desc">If you have already account click hero to log in</string>
+</resources>
