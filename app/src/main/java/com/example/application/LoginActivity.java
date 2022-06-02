@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private final String EMPTY_FIELDS_ERROR_MESSAGE = "Some fields are empty!";
     private final String INVALID_CREDENTIALS_ERROR_MESSAGE = "Invalid credentials!";
+    private final String SUCCESSFULLY_LOGGED_IN_MESSAGE = "You have successfully logged in!";
 
     private FirebaseAuth firebaseAuthentication;
 
@@ -56,7 +57,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                Toast.makeText(LoginActivity.this, "Redirect!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, SUCCESSFULLY_LOGGED_IN_MESSAGE, Toast.LENGTH_SHORT).show();
+                                redirectToScreen(HomeActivity.class);
                             } else {
                                 Toast.makeText(LoginActivity.this, INVALID_CREDENTIALS_ERROR_MESSAGE, Toast.LENGTH_SHORT).show();
                             }

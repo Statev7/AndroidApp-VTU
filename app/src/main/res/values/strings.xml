@@ -6,4 +6,7 @@
     <string name="login">Login</string>
     <string name="register_link_desc">If you do not have account click here to create one</string>
     <string name="login_link_desc">If you have already account click hero to log in</string>
+    <string name="logout">Logout</string>
+    <string name="start_game">Start new game</string>
+    <string name="home_heading">Home</string>
 </resources>

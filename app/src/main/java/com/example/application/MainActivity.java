@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void redirectToHomeScreenIfLoggedIn(){
         boolean isLoggedIn = firebaseAuthentication.getCurrentUser() != null;
-        //TODO redirect to home activity!
+        if (isLoggedIn){
+            this.redirectToScreen(HomeActivity.class);
+        }
     }
 
     public void redirectToScreen(Class screen){

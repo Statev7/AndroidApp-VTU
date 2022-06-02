@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final int PASSWORD_MIN_LENGTH = 5;
+    private final int PASSWORD_MIN_LENGTH = 6;
     private final String PASSWORD_LENGTH_ERROR_MESSAGE = "Password should be longer than 5 symbols!";
     private final String PASSWORD_NOT_MATCH_ERROR_MESSAGE = "Password should match repeat password!";
     private final String SUCCESSFULLY_REGISTER_MESSAGE = "Successful register!";
@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         boolean isNotEmpty = !email.isEmpty() && !password.isEmpty() && !repeatPassword.isEmpty();
         if (isNotEmpty){
 
-            if (password.length() <= PASSWORD_MIN_LENGTH){
+            if (password.length() < PASSWORD_MIN_LENGTH){
                 Toast.makeText(RegisterActivity.this, PASSWORD_LENGTH_ERROR_MESSAGE, Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -75,6 +75,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                             }
                             Toast.makeText(RegisterActivity.this, SUCCESSFULLY_REGISTER_MESSAGE,
                                     Toast.LENGTH_SHORT).show();
+                            redirectToScreen(LoginActivity.class);
                         }
                     });
         } else {

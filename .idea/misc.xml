@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidApp-VTU/app/src/main/res/layout/activity_home.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidApp-VTU/app/src/main/res/layout/activity_login.xml" value="0.358695652173913" />
         <entry key="..\:/AndroidApp-VTU/app/src/main/res/layout/activity_main.xml" value="0.3482789855072464" />
         <entry key="..\:/AndroidApp-VTU/app/src/main/res/layout/activity_register.xml" value="0.3482789855072464" />
+        <entry key="..\:/AndroidApp-VTU/app/src/main/res/menu/main_menu.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
