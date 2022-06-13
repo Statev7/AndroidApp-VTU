@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ResultActivity">
+
+    <TextView
+        android:id="@+id/stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
+        android:text="TextView"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/startNewGame"
+        android:layout_width="213dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="140dp"
+        android:text="@string/start_game"
+        app:layout_constraintEnd_toEndOf="@+id/stats"
+        app:layout_constraintStart_toStartOf="@+id/stats"
+        app:layout_constraintTop_toBottomOf="@+id/stats" />
+</androidx.constraintlayout.widget.ConstraintLayout>
