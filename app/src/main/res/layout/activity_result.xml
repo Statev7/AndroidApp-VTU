@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/danube"
     tools:context=".ResultActivity">
 
     <TextView
         android:id="@+id/stats"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="144dp"
+        android:layout_width="214dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="136dp"
+        android:fontFamily="sans-serif-medium"
         android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +25,10 @@
         android:id="@+id/startNewGame"
         android:layout_width="213dp"
         android:layout_height="56dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="32dp"
         android:text="@string/start_game"
         app:layout_constraintEnd_toEndOf="@+id/stats"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/stats"
         app:layout_constraintTop_toBottomOf="@+id/stats" />
 </androidx.constraintlayout.widget.ConstraintLayout>

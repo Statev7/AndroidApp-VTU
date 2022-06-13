@@ -4,14 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/danube"
     tools:context=".GameActivity">
 
     <TextView
         android:id="@+id/questionTitle"
-        android:layout_width="294dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="92dp"
+        android:layout_width="305dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/rounded_corner"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="5sp"
+        android:paddingTop="22sp"
+        android:paddingRight="5sp"
+        android:paddingBottom="22sp"
         android:text="@string/question"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -23,12 +29,12 @@
 
     <RadioGroup
         android:id="@+id/group"
-        android:layout_width="152dp"
-        android:layout_height="259dp"
+        android:layout_width="247dp"
+        android:layout_height="238dp"
         android:layout_marginTop="32dp"
         android:padding="2px"
         app:layout_constraintEnd_toEndOf="@+id/questionTitle"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="@+id/questionTitle"
         app:layout_constraintTop_toBottomOf="@+id/questionTitle">
 
@@ -36,33 +42,52 @@
             android:id="@+id/radioBtn1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:button="@drawable/icons8_a_32"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="12sp"
+            android:text="Тест"
             android:textAlignment="viewStart"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioBtn2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
+            android:background="@drawable/rounded_corner"
+            android:button="@drawable/icons8_b_32"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="12sp"
             android:text="RadioButton"
             android:textAlignment="viewStart"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioBtn3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
+            android:background="@drawable/rounded_corner"
+            android:button="@drawable/icons8_c_32"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="12sp"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
 
         <RadioButton
             android:id="@+id/radioBtn4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10sp"
+            android:background="@drawable/rounded_corner"
+            android:button="@drawable/icons8_d_32"
+            android:fontFamily="sans-serif-medium"
+            android:paddingLeft="12sp"
             android:text="RadioButton"
-            android:textSize="16sp" />
+            android:textAlignment="viewStart"
+            android:textSize="18sp" />
     </RadioGroup>
 
     <Button
