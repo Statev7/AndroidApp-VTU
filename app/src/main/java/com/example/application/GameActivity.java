@@ -20,6 +20,13 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
+    private final int middleRankLowerLimitRate = 50;
+    private final int middleRankHighLimitRate = 80;
+    private final int highRankLowerLimitRate = 80;
+    private final String lowRank = "Beginner";
+    private final String midRank = "Semi-Pro";
+    private final String highRank = "Pro";
+
     private ArrayList<Question> questions;
     private TextView questionTitle;
     private RadioGroup group;
@@ -73,8 +80,15 @@ public class GameActivity extends AppCompatActivity {
         boolean isQuizEnd = this.currentQuestion >= this.questionCount;
         if(isQuizEnd){
             Intent intent = new Intent(this, ResultActivity.class);
-            intent.putExtra("Score", this.score);
-            intent.putExtra("questionCount", this.questionCount);
+            String rank = this.determineRank();
+
+            StringBuilder sb = new StringBuilder();
+            sb.append("Stats: " + this.score + "/" + this.questionCount + "\n");
+            sb.append("Rank: " + rank);
+
+            String resultAsString = sb.toString();
+
+            intent.putExtra("Stats", resultAsString);
             startActivity(intent);
             return;
         }
@@ -124,5 +138,18 @@ public class GameActivity extends AppCompatActivity {
     public void setRandomIndex(){
         Random random = new Random();
         this.randomIndex = random.nextInt(this.questions.size() - 1);
+    }
+
+    public String determineRank(){
+        String rank = lowRank;
+        double rate = ((double) this.score / this.questionCount) * 100;
+
+        if (rate >= middleRankLowerLimitRate && middleRankHighLimitRate <= 80){
+            rank = midRank;
+        }else if(rate > highRankLowerLimitRate){
+            rank = highRank;
+        }
+
+        return  rank;
     }
 }

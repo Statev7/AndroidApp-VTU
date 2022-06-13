@@ -33,10 +33,8 @@ public class ResultActivity extends AppCompatActivity {
     public void setStats(){
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
-        String score = bundle.get("Score").toString();
-        String questionCount = bundle.get("questionCount").toString();
+        String stats = bundle.get("Stats").toString();
 
-        String resultText = score + "/" + questionCount;
-        this.stats.setText(resultText);
+        this.stats.setText(stats);
     }
 }
