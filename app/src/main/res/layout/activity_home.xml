@@ -10,25 +10,26 @@
         android:id="@+id/startGame"
         android:layout_width="218dp"
         android:layout_height="52dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="56dp"
         android:text="@string/start_game"
         app:layout_constraintEnd_toEndOf="@+id/numberOfQue"
+        app:layout_constraintHorizontal_bias="0.8"
         app:layout_constraintStart_toStartOf="@+id/numberOfQue"
         app:layout_constraintTop_toBottomOf="@+id/numberOfQue" />
 
     <EditText
         android:id="@+id/numberOfQue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_width="213dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="Number of questions"
         android:inputType="numberSigned"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/homeHeading"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/homeHeading"
-        app:layout_constraintTop_toBottomOf="@+id/homeHeading" />
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/homeHeading"
@@ -42,5 +43,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="212dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/dropdownDesc"
+        app:layout_constraintEnd_toEndOf="@+id/categoryHeading"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/categoryHeading"
+        app:layout_constraintTop_toBottomOf="@+id/categoryHeading" />
+
+    <TextView
+        android:id="@+id/categoryHeading"
+        android:layout_width="212dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:paddingLeft="6sp"
+        android:text="@string/categoryHeading"
+        android:textAlignment="textStart"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/homeHeading"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/homeHeading"
+        app:layout_constraintTop_toBottomOf="@+id/homeHeading" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
