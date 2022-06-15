@@ -144,7 +144,7 @@ public class GameActivity extends AppCompatActivity {
         String rank = lowRank;
         double rate = ((double) this.score / this.questionCount) * 100;
 
-        if (rate >= middleRankLowerLimitRate && middleRankHighLimitRate <= 80){
+        if (rate >= middleRankLowerLimitRate && rate <= middleRankHighLimitRate){
             rank = midRank;
         }else if(rate > highRankLowerLimitRate){
             rank = highRank;
